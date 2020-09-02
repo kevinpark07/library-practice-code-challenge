@@ -1,0 +1,22 @@
+<h1><%= @student.name %></h1>
+<hr>
+<p><b>Age: </b> <%= @student.age %></p>
+<p><b>Grade: </b> <%= @student.grade %></p>
+<b>Books: </b> |  <u><%= link_to "Add Book", new_library_path %></u><br>
+<ol>
+    <% @student.libraries.each do |library| %>
+    <li><p><%= library.book.title %></p>
+        <ul>
+            <li><%= library.book.author %></li>
+        </ul>
+    </li>
+    <% end %>
+</ol>
+<br>
+<br>
+<p><%= button_to "Remove Student", student_path(@student), method: :delete %>
+<br>
+<br>
+<p><b><u><%= link_to "Edit Student", edit_student_path %></u></b></p>
+<br>
+<p><b><u><%= link_to "Index", students_path %></u></b></p>

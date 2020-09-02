@@ -1,0 +1,7 @@
+<h1>Book Catalog</h1>
+<hr>
+<ul>
+    <% @books.each do |book| %>
+    <li><p><%= link_to book.title, book_path(book) %></p></li>
+    <% end %>
+</ul>

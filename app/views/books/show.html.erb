@@ -1,0 +1,13 @@
+<h1><%= @book.title %></h1>
+<hr>
+<p><b>Author: </b> <%= @book.author %></p>
+<br>
+<p><b>Genre: </b> <%= @book.genre %></p>
+<br>
+<b>Summary: </b><br>
+<br>
+<%= @book.summary %>
+<br>
+<br>
+<br>
+<p><%= link_to "Index", books_path %></p>

@@ -1,0 +1,14 @@
+<h1>Library Book Checkout</h1>
+<%= form_for @library do |f| %>
+<br>
+<br>
+<label><b>Student:</b></label>
+<%= f.collection_select :student_id,  @students, :id, :name %>
+<br>
+<br>
+<label><b>Book:</b></label>
+<%= f.collection_select :book_id,  @books, :id, :title %>
+<br>
+<br>
+<%= f.submit "Checkout Book" %>
+<% end %>
